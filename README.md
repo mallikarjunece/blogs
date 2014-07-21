@@ -1,4 +1,5 @@
 blogs
 =====
 
-### This holds various useful shortcuts/tips 
+### This holds various useful shortcuts/tips.
+
