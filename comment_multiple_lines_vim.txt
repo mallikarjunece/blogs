@@ -1,0 +1,25 @@
+Sometimes we have to comment multiple lines of code with this editor. 
+this is a simple way to do it:
+
+1) Position yourself at the beginning of the first line of the block you want to comment.
+2) Press Ctrl + V: visual mode
+3) Get down the cursor to the last line of the block you want to comment.
+4) Ctrl + I: Insert
+5) #
+6) Press Esc twice
+
+Another way:
+
+:x,y s/^/## /
+
+where:
+
+'x' and 'y' are the initial and final line that we want to comment.
+
+
+Example:
+
+:1,10 s/^/# / 
+
+
+Will comment the lines from 1 to 10.
