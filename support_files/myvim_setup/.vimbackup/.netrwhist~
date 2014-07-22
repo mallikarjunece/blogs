@@ -1,4 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/home/likewise-open/ZOHOCORP/malli-0370/rails_projects/May_05/sample_app_github'
-let g:netrw_dirhist_2='/home/likewise-open/ZOHOCORP/malli-0370/GITREP/local/configtool'
