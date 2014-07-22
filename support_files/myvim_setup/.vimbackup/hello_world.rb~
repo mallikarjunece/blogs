@@ -1,0 +1,18 @@
+#require "hello_world/version"
+
+module HelloWorld
+
+	class Execute
+
+		def initialize(cmd)
+			@cmd = cmd
+		end
+
+		def self.ls(@cmd)
+			puts "#{`@cmd`}"
+		end
+
+	end
+
+end
+

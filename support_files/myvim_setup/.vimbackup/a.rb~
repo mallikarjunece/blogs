@@ -1,0 +1,2 @@
+puts "#{ls -ltr}"
+puts "${pwd}"

@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'hello_world'
+
+HelloWorld::Execute.ls(ARGV[0])
