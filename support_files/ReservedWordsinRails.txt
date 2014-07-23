@@ -1,0 +1,233 @@
+* ADDITIONAL_LOAD_PATHS
+* ARGF
+* ARGV
+* ActionController
+* ActionView
+* ActiveRecord
+* ArgumentError
+* Array
+* BasicSocket
+* Benchmark
+* Bignum
+* Binding
+* CGI
+* CGIMethods
+* CROSS_COMPILING
+* Class
+* ClassInheritableAttributes
+* Comparable
+* ConditionVariable
+* Config
+* Continuation
+* DRb
+* DRbIdConv
+* DRbObject
+* DRbUndumped
+* Data
+* Date
+* DateTime
+* Delegater
+* Delegator
+* Digest
+* Dir
+* ENV
+* EOFError
+* ERB
+* Enumerable
+* Errno
+* Exception
+* FALSE
+* FalseClass
+* Fcntl
+* File
+* FileList
+* FileTask
+* FileTest
+* FileUtils
+* Fixnum
+* Float
+* FloatDomainError
+* GC
+* Gem
+* GetoptLong
+* Hash
+* IO
+* IOError
+* IPSocket
+* IPsocket
+* IndexError
+* Inflector
+* Integer
+* Interrupt
+* Kernel
+* LN_SUPPORTED
+* LoadError
+* LocalJumpError
+* Logger
+* Marshal
+* MatchData
+* MatchingData
+* Math
+* Method
+* Module
+* Mutex
+* Mysql
+* MysqlError
+* MysqlField
+* MysqlRes
+* NIL
+* NameError
+* NilClass
+* NoMemoryError
+* NoMethodError
+* NoWrite
+* NotImplementedError
+* Numeric
+* OPT_TABLE
+* Object
+* ObjectSpace
+* Observable
+* Observer
+* PGError
+* PGconn
+* PGlarge
+* PGresult
+* PLATFORM
+* PStore
+* ParseDate
+* Precision
+* Proc
+* Process
+* Queue
+* RAKEVERSION
+* RELEASE_DATE
+* RUBY
+* RUBY_PLATFORM
+* RUBY_RELEASE_DATE
+* RUBY_VERSION
+* Rack
+* Rake
+* RakeApp
+* RakeFileUtils
+* Range
+* RangeError
+* Rational
+* Regexp
+* RegexpError
+* Request
+* RuntimeError
+* STDERR
+* STDIN
+* STDOUT
+* ScanError
+* ScriptError
+* SecurityError
+* Signal
+* SignalException
+* SimpleDelegater
+* SimpleDelegator
+* Singleton
+* SizedQueue
+* Socket
+* SocketError
+* StandardError
+* String
+* StringScanner
+* Struct
+* Symbol
+* SyntaxError
+* SystemCallError
+* SystemExit
+* SystemStackError
+* TCPServer
+* TCPSocket
+* TCPserver
+* TCPsocket
+* TOPLEVEL_BINDING
+* TRUE
+* Task
+* Text
+* Thread
+* ThreadError
+* ThreadGroup
+* Time
+* Transaction
+* TrueClass
+* TypeError
+* UDPSocket
+* UDPsocket
+* UNIXServer
+* UNIXSocket
+* UNIXserver
+* UNIXsocket
+* UnboundMethod
+* Url
+* VERSION
+* Verbose
+* YAML
+* ZeroDivisionError
+
+Other names that have been reported to cause trouble:
+
+* accept
+* callback – breaks validation if used as a model method.
+* categorie
+* action
+* attributes – if you have a has_many called attributes, you can’t access to your object attributes anymore; only the associated objects
+* application2
+* @base_path – setting this variable name in a controller method seems to break the ablity to render a partial in the view. The view will render with no content and no errors will be generated .
+* connection – there seems to be a connection class already
+* database – (in mysql)
+* dispatcher
+* display1
+* drive – fixtures will not autogenerate IDs in Rails 2.0.2
+* errors
+* format
+* host – I had a text_field :host, :name that I saw problems with. (JR)
+* key
+* layout – If you have a model called Layout and in a controller have “scaffold :layout” it generates an exception. However, if you script/generate the scaffold for layout it works.
+* load – When making an Ajax call to an action named load, the action’s code will be skipped (or otherwise rendered useless). This is made apparent by: a) @variables are not available in the view, b) calling render :layout => false still yields the layout.
+* link – breaks migrations when used as a column name in combination with validation: ticket
+* new, override to news if you want a news table
+* notify – not a valid column name
+* open – not a valid column name
+* public
+* quote ‘quote’ cannot be used as a column name
+* render – cannot be used as an action name
+* request
+* records – a table named records seemed to cause duplicate entries to be found by find
+* responses – scaffold borks with "undefined method ‘body=’ "
+* save – ActiveRecord uses this to save the object.
+* scope – do not use as an association name because ActiveRecord::Base.scope is called instead
+* send
+* session (session_controller or SessionController will not work)
+* system – a table column named system causes problems when trying to generate scaffold
+* template – a table named templates causes an error when you try to invoke the create method of the default controller
+* test (however those work with ruby test/unit/axistest.rb_ and rake testunits_)
+* timeout – an ActiveRecord attribute named timeout will clash with the global function “timeout” defined in Ruby’s timeout.rb
+* to_s — naming a model instance method to_s resulted in ‘File not found’ for any view an object of this class (should have) appeared in (no matter which method called) and WebRick had to be restarted. I couldn’t drag the very cause into light, but in the traces ‘to_s’ gave me a hint. After renaming everything worked well again.
+* type — or any of the other MagicFieldNames
+* URI
+* visits — a table column named visits causes problems when trying to query some_obj.visits.
+* Observer — for a model name works in development environment but not in production.
+singular names finishing in “s”: Axis → Axes, Access → Accesses, will break the pluralization in rake: Axi, Acces
+
+Monitor cannot be used. It is a Ruby class that is related to threading.
+
+List of Magic Field Names
+
+* created_at
+* created_on
+* updated_at
+* updated_on
+* lock_version
+* type
+* id
+* #{table_name}_count
+* position
+* parent_id
+* lft
+* rgt
+* quote_value (is used for quoting)
+* template
+
